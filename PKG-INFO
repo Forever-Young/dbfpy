@@ -1,12 +1,12 @@
 Metadata-Version: 1.0
 Name: dbfpy
-Version: 2.3.0
+Version: 2.3.1
 Summary: Access .DBF (dBase) files from python
 Home-page: http://dbfpy.sourceforge.net/
 Author: Jeff Kunce
 Author-email: dbfpy-users@lists.sourceforge.net
 License: public domain
-Download-URL: http://sourceforge.net/project/showfiles.php?group_id=140566
+Download-URL: https://sourceforge.net/projects/dbfpy/files/dbfpy/2.3.1/
 Description: dbfpy is a python-only module for reading and writing DBF-files.
         It was created by Jeff Kunce and then modified by Hans Fiby
         and Yaroslav Samchuk.

@@ -2,6 +2,8 @@
 
 from distutils.core import setup
 
+VERSION = "2.3.1"
+
 DESCRIPTION = """\
 dbfpy is a python-only module for reading and writing DBF-files.
 It was created by Jeff Kunce and then modified by Hans Fiby
@@ -18,16 +20,20 @@ only simple DBF-files.
 
 def run():
     setup(name="dbfpy",
-        version="2.3.0",
+        version=VERSION,
         description="Access .DBF (dBase) files from python",
         url="http://dbfpy.sourceforge.net/",
         license="public domain",
         author="Jeff Kunce",
+        # XXX cannot add maintainer field to PKG-INFO:
+        # it overwrites the author name on PyPI
+        # because author's email is not known.
+        #maintainer="dbfpy users mailing list",
         maintainer_email="dbfpy-users@lists.sourceforge.net",
         packages=["dbfpy"],
         long_description=DESCRIPTION,
-        download_url=
-            "http://sourceforge.net/project/showfiles.php?group_id=140566",
+        download_url="https://sourceforge.net/projects/dbfpy/files/dbfpy/%s/"
+            % VERSION,
         platforms=["OS Independent"],
         classifiers=[
             "Development Status :: 5 - Production/Stable",

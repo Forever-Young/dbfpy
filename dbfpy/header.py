@@ -215,10 +215,13 @@ Version (signature): 0x%02x
         """Update self.headerLength attribute after change to header contents
         """
         # recalculate headerLength
-        self.headerLength = 32 + (32 * len(self.fields)) + 1
+        _hl = 32 + (32 * len(self.fields)) + 1
         if self.signature == 0x30:
             # Visual FoxPro files have 263-byte zero-filled field for backlink
-            self.headerLength += 263
+            _hl += 263
+        # bug#15: don't reduce existing header size
+        if _hl > self.headerLength:
+            self.headerLength = _hl
 
     ## interface methods
 

@@ -1,3 +1,10 @@
+Version 2.3.1 (09-aug-2015)
+---------------------------
+
+Fix db.close() for files without Memo fields (bug#16).
+
+Don't reduce existing header size when a Memo file is attached (bug#15).
+
 Version 2.3.0 (29-jun-2014)
 ---------------------------
 
